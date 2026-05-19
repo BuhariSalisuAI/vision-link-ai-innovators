@@ -23,7 +23,6 @@ from __future__ import annotations
 import os
 import logging
 from functools import lru_cache
-from typing import Optional
 
 from langchain_huggingface import HuggingFaceEndpoint
 from langchain_core.language_models.llms import BaseLLM

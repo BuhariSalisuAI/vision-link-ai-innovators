@@ -19,7 +19,6 @@ import hashlib
 import inspect
 import json
 import os
-import sys
 import time
 import types
 import uuid
@@ -353,7 +352,7 @@ def node_evolve(state: Dict[str, Any]) -> Dict[str, Any]:
         _live_variant_fn.update({"fitness": best_fitness, "hash": best_hash})
         ps.error_log.append(f"[evolve] Champion: hash={best_hash} fitness={best_fitness:.2f}")
     else:
-        ps.error_log.append(f"[evolve] Existing pipeline retained.")
+        ps.error_log.append("[evolve] Existing pipeline retained.")
 
     ps.evolution = EvolutionMetrics(
         run_id=ps.run_id,
